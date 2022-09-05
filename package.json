@@ -1,7 +1,6 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node server/server.js",
@@ -17,5 +16,16 @@
     "aws-sdk": "^2.1209.0",
     "dotenv": "^16.0.2",
     "express": "^4.18.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaojustin/photography.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/zhaojustin/photography/issues"
+  },
+  "homepage": "https://github.com/zhaojustin/photography#readme",
+  "description": ""
 }
