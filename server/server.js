@@ -1,7 +1,8 @@
-require("dotenv").config({ path: "../../.env" });
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 8000;
+const path = require("path");
 
 const AWS = require("aws-sdk");
 const s3 = new AWS.S3({
@@ -12,6 +13,8 @@ const BUCKET_NAME = "justinzhao-photography";
 var bucketParams = {
   Bucket: BUCKET_NAME,
 };
+
+app.use(express.static(path.resolve(__dirname, "./client/build")));
 
 let keys = [];
 s3.listObjects(bucketParams, function (err, data) {
